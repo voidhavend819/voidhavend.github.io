@@ -1,0 +1,147 @@
+/* Сброс стилей для браузеров */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    height: 100px;
+    background-image: url(''); /* Путь к твоему фону */
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    background-image: url('images/maxresdefault.jpg'); /* Указывайте путь к вашему изображению */
+    background-size: cover; /* Покрывает весь блок */
+    background-position: center; /* Центрирует изображение */
+    background-size: 20%;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+
+.overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Желтый цвет при наведении */
+}
+
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#upload h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.photo-container {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.photo {
+    display: block;
+    border-radius: 15px;
+}
+
+.description {
+    flex: 1;
+    max-width: 500px;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo-container, .description {
+        max-width: 90%;
+    }
+}
+
+a {
+    text-decoration: none;
+color: #333;
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление Фото и Текста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="overlay">
+            <h1>Добавление Фото и Текста</h1>
+            <p>Загрузите изображение и добавьте к нему описание.</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#upload">Загрузить Фото</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="upload">
+            <h2>Добавьте Фото и Текст</h2>
+            <input type="file" id="imageInput" accept="image/*"><br>
+            <textarea id="textInput" placeholder="Введите описание..." rows="4" cols="50"></textarea><br>
+            <button onclick="previewContent()">Предпросмотр</button>
+            <div id="preview" class="container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Добавление Фото и Текста. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function previewContent() {
+            const fileInput = document.getElementById('imageInput');
+            const textInput = document.getElementById('textInput').value;
+            const previewDiv = document.getElementById('preview');
+            
+            previewDiv.innerHTML = `<p>${textInput}</p>`;
+            
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewDiv.innerHTML += `<img src="${e.target.result}" alt="Загруженное изображение">`;
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>
