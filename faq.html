@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гид по Оптимизации Minecraft</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Обратно</a></li>
+            </ul>
+        </div>
+        <h1>Часто Задоваемые вопросы</h1>
+        <br>
+        <p> </p>
+    </header>
+
+    <main>
+        <section id="q1">
+            <h2>Что такое оптимизация Minecraft и почему она важна?</h2>
+            <br>     
+            <button class="toggle-button" onclick="toggleAnswer('q1-answer')">Узнать больше</button>
+            <div id="q1-answer" class="answer">
+                <p>Оптимизация Minecraft — это процесс настройки игры таким образом, чтобы она работала быстрее и плавнее, особенно на слабых или старых компьютерах. Это важно для уменьшения лагов, повышения FPS (кадров в секунду) и улучшения общей производительности игры, что позволяет получить более комфортный игровой опыт.</p>
+            </div>
+        </section>
+
+        <section id="q2">
+            <h2>Как увеличить производительность Minecraft на слабом ПК?</h2>
+            <br>     
+            <button class="toggle-button" onclick="toggleAnswer('q2-answer')">Узнать больше</button>
+            <div id="q2-answer" class="answer">
+                <p>Уменьшить дальность прорисовки. Отключить или уменьшить качество графики (например, тени, сглаживание, детали воды). Использовать моды для оптимизации, такие как OptiFine или Sodium. Установить легкие ресурс-паки с низким разрешением текстур. Отключить ненужные эффекты и улучшить настройки видеокарты.</p>    
+            </div>
+        </section>
+
+        <section id="q3">
+            <h2>Что такое OptiFine и как он помогает улучшить производительность?</h2>
+            <br>     
+            <button class="toggle-button" onclick="toggleAnswer('q3-answer')">Узнать больше</button>
+            <div id="q3-answer" class="answer">
+                <p>OptiFine — это мод для Minecraft, который предоставляет дополнительные настройки графики и помогает улучшить производительность. Он позволяет уменьшить нагрузку на процессор и видеокарту, оптимизировать текстуры и графику, а также добавляет улучшения, такие как ускорение рендеринга.</p>
+            </div>
+        </section>
+
+        <section id="q4">
+            <h2>Можно ли использовать OptiFine и Sodium вместе?</h2>
+            <br>     
+            <button class="toggle-button" onclick="toggleAnswer('q4-answer')">Узнать больше</button>
+            <div id="q4-answer" class="answer">
+                <p>Нет, OptiFine и Sodium не совместимы между собой, поскольку оба мода изменяют рендеринг игры, но делают это по-разному. Если вы используете Fabric, то вам нужно использовать Sodium, а если Forge — OptiFine.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Оптимизация Minecraft. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
